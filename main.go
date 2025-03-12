@@ -18,7 +18,7 @@ func main() {
 	http.HandleFunc("/cpu", loadCPU)
 	http.HandleFunc("/memory", loadMemory)
 	log.Println("Listen: 8000.")
-	http.ListenAndServe(":8000", nil)
+	log.Println(http.ListenAndServe(":8000", nil))
 }
 
 func loadCPU(w http.ResponseWriter, r *http.Request) {
